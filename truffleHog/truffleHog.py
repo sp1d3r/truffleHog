@@ -130,9 +130,9 @@ def find_strings(git_url, printJson=False):
                         if printJson:
                             print(json.dumps(output, sort_keys=True, indent=4))
                         else:
-                            print(bcolors.OKGREEN + "Date: " + commit_time + bcolors.ENDC)
-                            print(bcolors.OKGREEN + "Branch: " + branch_name + bcolors.ENDC)
-                            print(bcolors.OKGREEN + "Commit: " + prev_commit.message + bcolors.ENDC)
+                            print(bcolors.OKGREEN + "Date: " + commit_time.encode('utf-8') + bcolors.ENDC)
+                            print(bcolors.OKGREEN + "Branch: " + branch_name.encode('utf-8') + bcolors.ENDC)
+                            print(bcolors.OKGREEN + "Commit: " + prev_commit.message.encode('utf-8') + bcolors.ENDC)
                             print(printableDiff.encode('utf-8'))
 
             prev_commit = curr_commit
